@@ -1,0 +1,278 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f5f4fa;
+  color: #24233a;
+  line-height: 1.7;
+}
+
+/* HEADER */
+
+.site-header {
+  background: linear-gradient(120deg, #28245c, #6256d9, #8878ee);
+  color: white;
+  text-align: center;
+  padding: 75px 20px 85px;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ffffff25;
+  border-radius: 50%;
+  right: 8%;
+  top: -180px;
+  box-shadow: 0 0 0 35px #ffffff08,
+              0 0 0 70px #ffffff05;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #dedaff;
+}
+
+.site-header h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+}
+
+.header-subtitle {
+  font-size: 16px;
+  color: #e6e2ff;
+  letter-spacing: 1px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding: 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 20px #25204a0d;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #55536e;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #6556d9;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+  width: min(1050px, calc(100% - 40px));
+  margin: 55px auto;
+}
+
+/* SECTION CARDS */
+
+.section-card {
+  background: white;
+  padding: 35px;
+  margin-bottom: 28px;
+  border-radius: 16px;
+  border: 1px solid #ebe9f5;
+  box-shadow: 0 8px 30px #29245c0a;
+  transition: 0.3s;
+}
+
+.section-card:hover {
+  box-shadow: 0 12px 35px #29245c12;
+  transform: translateY(-3px);
+}
+
+.section-card h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 27px;
+  color: #302c60;
+  margin-bottom: 18px;
+}
+
+.section-card p {
+  color: #69677d;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* SKILLS */
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.skills-list li {
+  padding: 11px 20px;
+  background: #f0edff;
+  color: #5749ba;
+  border: 1px solid #e4dfff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.skills-list li:hover {
+  background: #6556d9;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* PROJECTS */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: linear-gradient(145deg, #ffffff, #f8f7ff);
+  border: 1px solid #e8e5f5;
+  border-radius: 13px;
+  padding: 25px;
+  min-height: 200px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #6658d9, #a18cff);
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px #5548b51c;
+  border-color: #bcb1ff;
+}
+
+.project-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  color: #302c60;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: #77748c;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+  background: linear-gradient(120deg, #25214f, #40367f);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.footer p {
+  margin: 7px 0;
+  font-size: 13px;
+  color: #e0dcff;
+}
+
+.footer a {
+  color: #c8bdff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 60px 15px;
+  }
+
+  .navbar {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    margin: 30px auto;
+  }
+
+  .section-card {
+    padding: 25px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+
+  .navbar {
+    gap: 16px;
+    padding: 16px 10px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-card {
+    padding: 22px;
+  }
+
+  .section-card h2 {
+    font-size: 23px;
+  }
+}
